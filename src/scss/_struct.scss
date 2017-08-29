@@ -1,0 +1,264 @@
+html, body {
+    background-color: $color-lblue;
+    color: $color-dgreen;
+    margin: 0;
+}
+
+header {
+    background-color: $color-purple;
+    background-image: url('../img/finalbanner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    // height: calc(100vh - 9rem);
+    // border-bottom: 3rem $color-blue solid;
+    height: 100vh;
+    width: 100vw;
+    max-width:100%;
+    @media (orientation: landscape) {
+        height: 120vh;
+    }
+    padding: 3rem 1rem;
+    box-sizing: border-box;
+    img {
+        width: 25vh;
+        @include respond-to(tablet) {
+            width: 15vw;
+            margin-left: 100px;
+        }
+    }
+}
+
+
+.main {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3rem 1rem;
+    position: relative;
+    z-index: 1;
+    @include respond-to(tablet) {
+        padding: 3rem 10vw;
+    }
+
+    &:before {
+        z-index: -1;
+        height: 50vh;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        content: '';
+        display: block;
+        background-color: $color-lblue;
+        transform-origin: 0 0;
+        transform: skewY(-2.5deg);
+        border-top: 3rem $color-blue solid;
+    }
+
+}
+
+.section {
+    padding: 1rem 1rem;
+    margin: 0 -1rem;
+    position: relative;
+    z-index: 20;
+
+    @include respond-to(tablet) {
+        padding: 1rem 7vw;
+        margin: 0 -10vw;
+    }
+}
+
+.n-background {
+    @extend .section;
+    padding: inherit;
+    background-color: $color-dgreen;
+    color: $color-lblue;
+    margin-top: 2rem;
+    margin-bottom: 2;
+    @include respond-to(tablet) {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    &:before {
+        z-index: -1;
+        height: 50%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        content: '';
+        display: block;
+        top: 0;
+        background-color: $color-dgreen;
+        transform-origin: 0 0;
+        transform: skewY(-2.5deg);
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:after {
+        @extend .n-background:before;
+        top: auto;
+        bottom: 0;
+        transform: skewY(2.5deg);
+
+    }
+}
+
+
+.n-background-flat{
+    &:after{
+        top:none;
+        //transform: skewY(2.5deg);
+        margin-bottom:-10rem;
+    }
+}
+.p-background {
+    @extend .n-background;
+    color: $color-lblue;
+    background-color: $color-purple;
+    &:before {
+        background-color: $color-purple;
+    }
+
+    &:after {
+        background-color: $color-purple;
+    }
+}
+
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -1rem -1rem;
+
+    @include respond-to(tablet) {
+        display: block;
+    }
+
+    @include respond-to(mobilarge) {
+        display: block;
+    }
+
+    @include respond-to(desktop) {
+        display: flex;
+    }
+
+}
+
+footer {
+    background-color: $color-dgreen;
+    color: $color-lblue;
+    min-height: 10rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.7rem;
+
+    a {
+        &:after {
+            background-color: $color-purple !important;
+        }
+        &:hover {
+            color: #fff !important;
+        }
+    }
+
+    &:before, &:after {
+        display: none !important;
+    }
+}
+
+.sponsors{
+    text-align: center;
+    font-size: xx-large;
+}
+
+.s-logo{
+    height: 70px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+
+
+.platinum{
+    @extend .s-logo;
+    height: 116px;
+    @include respond-to(mobionly){
+        height: 95px;
+    }
+}
+
+
+.bloomberg{
+    height: 50px;
+}
+.badge-size {
+    height:197px;
+    width:auto;
+}
+
+.porticode-table{
+    width: 100%;
+    display: table;
+}
+
+.schedule-overview{
+    display: inline-block;
+    width: 100%;
+    margin-top:-5px;
+}
+
+.table-container{
+    text-align: center;
+    display: inherit;
+    width: 40%;
+
+    @include respond-to(mobionly) {
+        display: block;
+        width: 100%;
+    }
+
+
+    @include respond-to(tablet) {
+        display: block;
+        width: 100%;
+    }
+
+    @include respond-to(dekstop) {
+        display: inherit;
+        width: 40%;
+    }
+}
+
+th, td {
+    padding: 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+td{
+    width:30%;
+}
+
+.mentor-box{
+    background-color: rgba(255,255,255,0.4);
+    height: 100%;
+    h3{
+        color: #d81e5b !important;
+        margin-bottom: -18px;
+        margin-top:inherit;   
+    }
+}
+
+.mentor-img{
+    border-radius: 60px;
+    height: 120px;
+    width: 120px;
+    margin-top:16px;
+}
+
