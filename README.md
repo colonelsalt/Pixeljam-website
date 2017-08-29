@@ -14,7 +14,7 @@ Gulp doesn't currently watch your files, so you have to run gulp every time you 
 
 The rest of it is standard HTML code being used.
 
-*gh-pages* is the master branch that's hooked to [the live site](http://porticode.io)
+*gh-pages* is the master branch that's hooked to [the live site](http://pixeljam.me)
 
 ## Credits
 
