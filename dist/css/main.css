@@ -19,6 +19,16 @@ h4 {
     margin-bottom: -20px;
 }
 
+h2 a {
+    font-family: "Expletus Sans", "Helvetica", Arial, sans-serif;
+    font-style:bold;
+    text-decoration:none;
+}
+
+h2 a:hover {
+    text-decoration:underline;
+}
+
 .embed-responsive {
     text-align:center;
 }
@@ -119,7 +129,7 @@ html, body {
 
 header {
   background-color: #d81e5b;
-  background-image: url("../img/finalbanner.jpg");
+  background-image: url("../img/afterwards.jpg");
   background-size: cover;
   background-position: center;
   color: #fff;
